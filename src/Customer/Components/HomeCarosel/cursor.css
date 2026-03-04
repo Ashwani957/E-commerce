@@ -1,0 +1,12 @@
+.carousel-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.carousel-image {
+  width: 100%;
+  max-width: 1500px;
+  height: 500px;
+  object-fit:cover;
+}
