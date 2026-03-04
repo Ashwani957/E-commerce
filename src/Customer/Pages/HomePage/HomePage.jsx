@@ -1,6 +1,7 @@
 
  
 import MainCarosel from "../../Components/HomeCarosel/MainCarosel";
+import HomeSectionCarosel from "../../Components/HomeSectionCarosel/HomeSectionCarosel";
  
 const  HomePage = ()=>{
     return (
@@ -8,8 +9,8 @@ const  HomePage = ()=>{
  {/* Main Curosel */}
 <MainCarosel/>
 
-<div>
-  Other section 
+<div className="space-y-10 py-20 flex-col justify-center px-5 lg:px-10">
+  <HomeSectionCarosel/>
 </div>
 
 </div>
