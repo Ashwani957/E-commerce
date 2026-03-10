@@ -1,29 +1,31 @@
+const ProductCard = ({ product }) => {
+  return (
+    <div className="productCard group w-[15rem] transition-all cursor-pointer flex flex-col">
+      {/* Image Section */}
+      <div className="h-[20rem] w-[15rem] overflow-hidden">
+        <img
+          className="h-full w-full object-cover object-top transition-transform duration-500 ease-in-out group-hover:scale-105"
+          src={product.image}
+          alt="Product"
+        />
+      </div>
 
-
-const ProductCard=()=>{
-    return (
-
-        <div className="productCard w-[15rem ] m-3 transition-all cursor-pointer ">
-          {/* Image  */}
-          <div className="h-[20rem]">
-            <img className="h-full   object-cover object-left-top  " src="https://rukminim1.flixcart.com/image/612/612/kasjjww0/ethnic-set/g/u/c/3xl-j0003-set-janasya-original-imafsadzyzarf93y.jpeg?q=70" alt=""/>
-          </div>
-
-          {/* Card Details Section */}
-          <div className="textPart bg-white p-3">
-            <div>
-                <p className="font-bold opacity-60">Universalolf</p>
-                <p>CAsual out filt sleevers soilid women </p>
-            </div>
-            {/* Price */}
-            <div className="font-semibold opacity-50">
-                <p>199</p>
-            </div>
-          </div>
-
-
+      {/* Card Details Section */}
+      <div className="textPart pt-4 flex flex-col gap-1">
+        <div>
+          <p className="font-semibold text-gray-500 text-xs tracking-wider mb-1 transition-all duration-300">{product.brand}</p>
+          <p className="text-gray-900 text-sm font-medium line-clamp-2 transition-all duration-300 group-hover:text-[15px]">{product.title}</p>
         </div>
-    )
+
+        {/* Price Section */}
+        <div className="flex items-center space-x-2 mt-2 transition-all duration-300">
+          <p className="font-bold text-gray-900 text-sm transition-all duration-300">₹{product.discount}</p>
+          <p className="line-through text-gray-400 text-xs transition-all duration-300">₹{product.price}</p>
+          <p className="text-green-500 font-semibold text-xs transition-all duration-300">{product.discount}</p>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default ProductCard;

@@ -6,7 +6,7 @@
         "color": "",
         "selling_price": "₹699",
         "price": "₹2,899",
-        "disscount": "75% off",
+        "discount": "75% off",
         "size": ""
     },
     {
@@ -16,7 +16,7 @@
         "color": "",
         "selling_price": "₹1,082",
         "price": "₹2,799",
-        "disscount": "61% off",
+        "discount": "61% off",
         "size": ""
     },
     {
@@ -26,7 +26,7 @@
         "color": "",
         "selling_price": "₹702",
         "price": "₹3,997",
-        "disscount": "82% off",
+        "discount": "82% off",
         "size": ""
     },
     {
@@ -36,7 +36,7 @@
         "color": "",
         "selling_price": "₹664",
         "price": "₹2,999",
-        "disscount": "77% off",
+        "discount": "77% off",
         "size": ""
     },
     {
@@ -46,7 +46,7 @@
         "color": "",
         "selling_price": "₹433",
         "price": "₹2,995",
-        "disscount": "85% off",
+        "discount": "85% off",
         "size": ""
     },
     {
@@ -56,7 +56,7 @@
         "color": "",
         "selling_price": "₹779",
         "price": "₹1,299",
-        "disscount": "40% off",
+        "discount": "40% off",
         "size": ""
     },
     {
@@ -66,7 +66,7 @@
         "color": "",
         "selling_price": "₹748",
         "price": "₹1,999",
-        "disscount": "62% off",
+        "discount": "62% off",
         "size": ""
     },
     {
@@ -76,7 +76,7 @@
         "color": "",
         "selling_price": "₹499",
         "price": "₹1,999",
-        "disscount": "75% off",
+        "discount": "75% off",
         "size": ""
     },
     {
@@ -86,7 +86,7 @@
         "color": "",
         "selling_price": "₹1,540",
         "price": "₹5,799",
-        "disscount": "73% off",
+        "discount": "73% off",
         "size": ""
     },
     {
@@ -96,7 +96,7 @@
         "color": "",
         "selling_price": "₹664",
         "price": "₹2,999",
-        "disscount": "77% off",
+        "discount": "77% off",
         "size": ""
     },
     {
@@ -106,7 +106,7 @@
         "color": "",
         "selling_price": "₹1,557",
         "price": "₹3,499",
-        "disscount": "55% off",
+        "discount": "55% off",
         "size": ""
     },
     {
@@ -116,7 +116,7 @@
         "color": "",
         "selling_price": "₹799",
         "price": "₹2,199",
-        "disscount": "63% off",
+        "discount": "63% off",
         "size": ""
     },
     {
@@ -126,7 +126,7 @@
         "color": "",
         "selling_price": "₹476",
         "price": "₹1,999",
-        "disscount": "76% off",
+        "discount": "76% off",
         "size": ""
     },
     {
@@ -136,7 +136,7 @@
         "color": "",
         "selling_price": "₹769",
         "price": "₹2,499",
-        "disscount": "69% off",
+        "discount": "69% off",
         "size": ""
     },
     {
@@ -146,7 +146,7 @@
         "color": "",
         "selling_price": "₹492",
         "price": "₹1,999",
-        "disscount": "75% off",
+        "discount": "75% off",
         "size": ""
     },
     {
@@ -156,7 +156,7 @@
         "color": "",
         "selling_price": "₹1,649",
         "price": "₹7,359",
-        "disscount": "77% off",
+        "discount": "77% off",
         "size": ""
     },
     {
@@ -166,7 +166,7 @@
         "color": "",
         "selling_price": "₹499",
         "price": "₹1,899",
-        "disscount": "73% off",
+        "discount": "73% off",
         "size": ""
     },
     {
@@ -176,7 +176,7 @@
         "color": "",
         "selling_price": "₹599",
         "price": "₹1,699",
-        "disscount": "64% off",
+        "discount": "64% off",
         "size": ""
     },
     {
@@ -186,7 +186,7 @@
         "color": "",
         "selling_price": "₹654",
         "price": "₹2,999",
-        "disscount": "78% off",
+        "discount": "78% off",
         "size": ""
     },
     {
@@ -196,7 +196,7 @@
         "color": "",
         "selling_price": "₹488",
         "price": "₹1,999",
-        "disscount": "75% off",
+        "discount": "75% off",
         "size": ""
     },
     {
@@ -206,7 +206,7 @@
         "color": "",
         "selling_price": "₹405",
         "price": "₹1,899",
-        "disscount": "78% off",
+        "discount": "78% off",
         "size": ""
     },
     {
@@ -216,7 +216,7 @@
         "color": "",
         "selling_price": "₹999",
         "price": "₹1,999",
-        "disscount": "50% off",
+        "discount": "50% off",
         "size": ""
     },
     {
@@ -226,7 +226,7 @@
         "color": "",
         "selling_price": "₹413",
         "price": "₹2,497",
-        "disscount": "83% off",
+        "discount": "83% off",
         "size": ""
     },
     {
@@ -236,7 +236,7 @@
         "color": "",
         "selling_price": "₹664",
         "price": "₹2,999",
-        "disscount": "77% off",
+        "discount": "77% off",
         "size": ""
     },
     {
@@ -246,7 +246,7 @@
         "color": "",
         "selling_price": "₹623",
         "price": "₹2,999",
-        "disscount": "79% off",
+        "discount": "79% off",
         "size": ""
     },
     {
@@ -256,7 +256,7 @@
         "color": "",
         "selling_price": "₹545",
         "price": "₹2,999",
-        "disscount": "81% off",
+        "discount": "81% off",
         "size": ""
     },
     {
@@ -266,7 +266,7 @@
         "color": "",
         "selling_price": "₹1,399",
         "price": "₹3,999",
-        "disscount": "65% off",
+        "discount": "65% off",
         "size": ""
     },
     {
@@ -276,7 +276,7 @@
         "color": "",
         "selling_price": "₹999",
         "price": "₹4,299",
-        "disscount": "76% off",
+        "discount": "76% off",
         "size": ""
     },
     {
@@ -286,7 +286,7 @@
         "color": "",
         "selling_price": "₹664",
         "price": "₹2,999",
-        "disscount": "77% off",
+        "discount": "77% off",
         "size": ""
     },
     {
@@ -296,7 +296,7 @@
         "color": "",
         "selling_price": "₹779",
         "price": "₹2,999",
-        "disscount": "74% off",
+        "discount": "74% off",
         "size": ""
     },
     {
@@ -306,7 +306,7 @@
         "color": "",
         "selling_price": "₹619",
         "price": "₹1,499",
-        "disscount": "58% off",
+        "discount": "58% off",
         "size": ""
     },
     {
@@ -316,7 +316,7 @@
         "color": "",
         "selling_price": "₹649",
         "price": "₹1,999",
-        "disscount": "67% off",
+        "discount": "67% off",
         "size": ""
     },
     {
@@ -326,7 +326,7 @@
         "color": "",
         "selling_price": "₹1,454",
         "price": "₹4,499",
-        "disscount": "67% off",
+        "discount": "67% off",
         "size": ""
     },
     {
@@ -336,7 +336,7 @@
         "color": "",
         "selling_price": "₹433",
         "price": "₹2,995",
-        "disscount": "85% off",
+        "discount": "85% off",
         "size": ""
     },
     {
@@ -346,7 +346,7 @@
         "color": "",
         "selling_price": "₹699",
         "price": "₹2,999",
-        "disscount": "76% off",
+        "discount": "76% off",
         "size": ""
     },
     {
@@ -356,7 +356,7 @@
         "color": "",
         "selling_price": "₹389",
         "price": "₹1,999",
-        "disscount": "80% off",
+        "discount": "80% off",
         "size": ""
     },
     {
@@ -366,7 +366,7 @@
         "color": "",
         "selling_price": "₹679",
         "price": "₹1,299",
-        "disscount": "47% off",
+        "discount": "47% off",
         "size": ""
     },
     {
@@ -376,7 +376,7 @@
         "color": "",
         "selling_price": "₹1,019",
         "price": "₹2,999",
-        "disscount": "66% off",
+        "discount": "66% off",
         "size": ""
     },
     {
@@ -386,7 +386,7 @@
         "color": "",
         "selling_price": "₹590",
         "price": "₹2,499",
-        "disscount": "76% off",
+        "discount": "76% off",
         "size": ""
     },
     {
@@ -396,7 +396,7 @@
         "color": "",
         "selling_price": "₹879",
         "price": "₹2,199",
-        "disscount": "60% off",
+        "discount": "60% off",
         "size": ""
     }
 ]

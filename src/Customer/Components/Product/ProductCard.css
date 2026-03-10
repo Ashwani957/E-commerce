@@ -1,0 +1,7 @@
+.productCard {
+    transition: transform .3s ease-out, box-shadow .3s ease-out;
+}
+
+.productCard:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

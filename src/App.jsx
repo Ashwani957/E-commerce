@@ -1,21 +1,23 @@
 import './App.css'
-import Navigation from  "./Customer/Components/Navigation/Navigationbar"
+import Navigation from "./Customer/Components/Navigation/Navigationbar"
 import HomePage from './Customer/Pages/HomePage/HomePage'
 import Footer from './Customer/Components/Footer/Footer'
 import Product from './Customer/Components/Product/Product'
+import ProductDetails from "./Customer/Components/ProductDetails/ProductDetails"
 function App() {
- 
+
 
   return (
-     <div className="w-full">
-      
-      <Navigation/>
+    <div className="w-full">
+
+      <Navigation />
       <div>
-      {/* <HomePage/> */}
-      <Product/>
+        {/* <HomePage /> */}
+        {/* <Product /> */}
+        <ProductDetails />
       </div>
-      <Footer/>
-     </div>
+      <Footer />
+    </div>
   )
 }
 
