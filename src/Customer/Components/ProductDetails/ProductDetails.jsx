@@ -1,6 +1,8 @@
 
 
 import { StarIcon } from '@heroicons/react/20/solid'
+import { Button, Grid, Rating } from '@mui/material'
+import ProductReviewCard from './ProductReviewCard'
 
 const product = {
     name: 'Basic Tee 6-Pack',
@@ -34,14 +36,11 @@ const product = {
         { id: 'black', name: 'Black', classes: 'bg-gray-900 checked:outline-gray-900' },
     ],
     sizes: [
-        { name: 'XXS', inStock: false },
-        { name: 'XS', inStock: true },
         { name: 'S', inStock: true },
         { name: 'M', inStock: true },
         { name: 'L', inStock: true },
         { name: 'XL', inStock: true },
-        { name: '2XL', inStock: true },
-        { name: '3XL', inStock: true },
+
     ],
     description:
         'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
@@ -62,7 +61,7 @@ function classNames(...classes) {
 
 export default function ProductDetails() {
     return (
-        <div className="bg-white">
+        <div className="bg-white lg:px-20">
             <div className="pt-6">
                 <nav aria-label="Breadcrumb">
                     <ol role="list" className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -96,92 +95,62 @@ export default function ProductDetails() {
                 <section className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-10 px-4 lg:px-10">
                     {/* Image Gallery */}
                     <div className="flex flex-col items-center">
-                        <div className="overflow-hidden rounded-lg max-w-[30rem] max-h[35rem]">
+                        <div className="overflow-hidden rounded-lg max-w-[30rem] max-h-[35rem]">
                             <img
                                 alt={product.images[0].alt}
                                 src={product.images[0].src}
-                                className="row-span-2 aspect-3/4 size-full rounded-lg object-cover max-lg:hidden"
+                                className="h-full w-full object-cover object-center"
                             />
                         </div>
 
-                        <div className="flex flex-wrap space-x-5 justify-center">
-                            {
-                                product.images.map((image) =>
-                                (
-                                    <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-                                        <img alt={image.alt}
-                                            src={image.src}
-                                            className="col-start-2 aspect-3/2 size-full rounded-lg object-cover max-lg:hidden"
-                                        />
-                                    </div>
-                                )
-
-                                )}
-
-
+                        {/* Thumbnail Images */}
+                        <div className="flex flex-wrap space-x-5 justify-center pt-5">
+                            {product.images.map((image, i) => (
+                                <div key={i} className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg max-w-[5rem] max-h-[5rem] mt-4 cursor-pointer hover:opacity-80 transition-opacity">
+                                    <img
+                                        alt={image.alt}
+                                        src={image.src}
+                                        className="h-full w-full object-cover object-center"
+                                    />
+                                </div>
+                            ))}
                         </div>
-
                     </div>
 
                     {/* Product info */}
-                    <div className="mx-auto max-w-2xl px-4 pt-10 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto_auto_1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24">
-                        <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-                            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{product.name}</h1>
+                    <div className="lg:col-span-1 max-auto max-w-2xl px-4 pb-16 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-24">
+                        <div className="lg:col-span-2">
+                            <h1 className="text-lg lg:text-xl font-semibold text-gray-900">UniversalOutfit</h1>
+                            <h1 className="text-lg lg:text-xl text-gray-900 opacity-60 pt-1">Casual Solid Women White Top</h1>
                         </div>
+
 
                         {/* Options */}
                         <div className="mt-4 lg:row-span-3 lg:mt-0">
                             <h2 className="sr-only">Product information</h2>
-                            <p className="text-3xl tracking-tight text-gray-900">{product.price}</p>
+                            <div className="flex space-x-5 items-center text-lg lg:text-xl text-gray-900 mt-6">
+
+                                <p className="font-semibold">
+                                    199
+                                </p>
+
+                                <p className="opacity-50 line-through">211</p>
+                                <p className="text-green-600 font-semibold">5%off</p>
+
+                            </div>
 
                             {/* Reviews */}
                             <div className="mt-6">
-                                <h3 className="sr-only">Reviews</h3>
-                                <div className="flex items-center">
-                                    <div className="flex items-center">
-                                        {[0, 1, 2, 3, 4].map((rating) => (
-                                            <StarIcon
-                                                key={rating}
-                                                aria-hidden="true"
-                                                className={classNames(
-                                                    reviews.average > rating ? 'text-gray-900' : 'text-gray-200',
-                                                    'size-5 shrink-0',
-                                                )}
-                                            />
-                                        ))}
-                                    </div>
-                                    <p className="sr-only">{reviews.average} out of 5 stars</p>
-                                    <a href={reviews.href} className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                                        {reviews.totalCount} reviews
-                                    </a>
+                                <div className="flext items-center space-x-3">
+                                    <Rating name="read-only" value={5} readOnly />
+                                    <p className="opacity-50 text-sm">56000 Ratings</p>
+                                    <p className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">3870 reviews</p>
                                 </div>
+
                             </div>
 
                             <form className="mt-10">
-                                {/* Colors */}
-                                <div>
-                                    <h3 className="text-sm font-medium text-gray-900">Color</h3>
 
-                                    <fieldset aria-label="Choose a color" className="mt-4">
-                                        <div className="flex items-center gap-x-3">
-                                            {product.colors.map((color) => (
-                                                <div key={color.id} className="flex rounded-full outline -outline-offset-1 outline-black/10">
-                                                    <input
-                                                        defaultValue={color.id}
-                                                        defaultChecked={color === product.colors[0]}
-                                                        name="color"
-                                                        type="radio"
-                                                        aria-label={color.name}
-                                                        className={classNames(
-                                                            color.classes,
-                                                            'size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3',
-                                                        )}
-                                                    />
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </fieldset>
-                                </div>
 
                                 {/* Sizes */}
                                 <div className="mt-10">
@@ -217,12 +186,11 @@ export default function ProductDetails() {
                                     </fieldset>
                                 </div>
 
-                                <button
-                                    type="submit"
-                                    className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden"
-                                >
-                                    Add to bag
-                                </button>
+
+                                <Button variant="contained" sx={{ px: "2rem", py: "1rem", bgcolor: "#9155fd" }}>
+                                    Add to Cart
+                                </Button>
+
                             </form>
                         </div>
 
@@ -261,7 +229,36 @@ export default function ProductDetails() {
                     </div>
 
                 </section>
-                {/* Image gallery */}
+                {/* Rating And Review  Section*/}
+
+                <section>
+                    <h1 className="font-semibold text-lg pb-4">Recent Review & Rating</h1>
+
+                    {/* Grid */}
+                    <div className="border p-5">
+                        <Grid container spacing={7}
+                        >
+                            <Grid item xs={7}>
+                                <div className="space-y-5">
+                                    {[1, 1, 1].map((item) => <ProductReviewCard />)}
+                                </div>
+                            </Grid>
+
+                            {/* Another Portion of it  */}
+                            <Grid item xs={5}>
+                                <h1 className="text-xl font-semibold pb-4">Product Ratings</h1>
+                                <div>
+
+                                    <Rating name="read-only" value={4.6} precision={.5}
+                                     readOnly />
+                                     <p className="opacity-60">54800 Ratings </p>
+                                </div>
+                            </Grid>
+
+                        </Grid>
+                    </div>
+
+                </section>
 
 
 
