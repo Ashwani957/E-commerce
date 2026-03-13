@@ -1,9 +1,10 @@
 
 
 import { StarIcon } from '@heroicons/react/20/solid'
-import { Button, Grid, Rating } from '@mui/material'
+import { Box, Button, Grid, LinearProgress, Rating } from '@mui/material'
 import ProductReviewCard from './ProductReviewCard'
-
+import HomeSectionCard from '../HomeSectionCard/HomeSectionCard'
+import mens_kurts from "../../../Data/mens_kurts";
 const product = {
     name: 'Basic Tee 6-Pack',
     price: '$192',
@@ -230,7 +231,6 @@ export default function ProductDetails() {
 
                 </section>
                 {/* Rating And Review  Section*/}
-
                 <section>
                     <h1 className="font-semibold text-lg pb-4">Recent Review & Rating</h1>
 
@@ -247,17 +247,62 @@ export default function ProductDetails() {
                             {/* Another Portion of it  */}
                             <Grid item xs={5}>
                                 <h1 className="text-xl font-semibold pb-4">Product Ratings</h1>
-                                <div>
+                                <div className="flex items-center space-x-3">
 
                                     <Rating name="read-only" value={4.6} precision={.5}
-                                     readOnly />
-                                     <p className="opacity-60">54800 Ratings </p>
+                                        readOnly />
+                                    <p className="opacity-60">54800 Ratings </p>
                                 </div>
+
+                                <Box className="mt-5 space-y-3">
+                                    <div className="flex items-center space-x-3">
+                                        <p className="w-[20%] text-sm">Excellent</p>
+                                        <div className="w-[70%]">
+                                            <LinearProgress sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }} variant="determinate" value={40} color="success" />
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center space-x-3">
+                                        <p className="w-[20%] text-sm">Very Good</p>
+                                        <div className="w-[70%]">
+                                            <LinearProgress sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }} variant="determinate" value={30} color="success" />
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center space-x-3">
+                                        <p className="w-[20%] text-sm">Good</p>
+                                        <div className="w-[70%]">
+                                            <LinearProgress sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7, "& .MuiLinearProgress-bar": { backgroundColor: "#facc15" } }} variant="determinate" value={25} />
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center space-x-3">
+                                        <p className="w-[20%] text-sm">Average</p>
+                                        <div className="w-[70%]">
+                                            <LinearProgress sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }} variant="determinate" value={20} color="warning" />
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center space-x-3">
+                                        <p className="w-[20%] text-sm">Poor</p>
+                                        <div className="w-[70%]">
+                                            <LinearProgress sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }} variant="determinate" value={10} color="error" />
+                                        </div>
+                                    </div>
+                                </Box>
+
+
+
                             </Grid>
 
                         </Grid>
                     </div>
 
+                </section>
+
+
+                {/* Similar Product */}
+                <section className="pt-10 pb-20">
+                    <h1 className="py-5 text-xl font-bold">Similar Products</h1>
+                    <div className="flex flex-wrap gap-5 justify-center mb-10">
+                        {mens_kurts.map((item, index) => <HomeSectionCard key={index} product={item} />)}
+                    </div>
                 </section>
 
 

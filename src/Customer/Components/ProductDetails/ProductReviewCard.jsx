@@ -5,7 +5,7 @@ import { Avatar, Box, Grid, Rating } from "@mui/material";
 const ProductReviewCard = () => {
     return (
         <div>
-            <Grid container spacing={2} gap={3}>
+            <Grid container spacing={2}>
 
                 {/* Grid item one */}
                 <Grid item xs={1}>
