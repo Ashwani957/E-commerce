@@ -1,6 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 const ProductCard = ({ product }) => {
+
+  const navigate = useNavigate();
   return (
-    <div className="productCard group w-[15rem] transition-all cursor-pointer flex flex-col">
+    <div onClick={() => navigate(`/product/${5}`)} className="productCard group w-[15rem] transition-all cursor-pointer flex flex-col">
       {/* Image Section */}
       <div className="h-[20rem] w-[15rem] overflow-hidden">
         <img

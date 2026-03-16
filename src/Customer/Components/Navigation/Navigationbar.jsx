@@ -17,6 +17,7 @@ import {
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Avatar, Button, Menu, MenuItem } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 
 const navigation = {
   categories: [
@@ -142,8 +143,35 @@ const navigation = {
   ],
 }
 
+
+
 export default function Navigationbar() {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false)
+  const [anchorEl, setAnchorEl] = useState(null);
+  const openUserMenu = Boolean(anchorEl);
+
+  const handleUserClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleCloseUserMenu = (event) => {
+    setAnchorEl(null);
+  }
+
+  const handleMyOrderClick = () => {
+    handleCloseUserMenu();
+    navigate("/account/order");
+  }
+
+
+
+  const handleCategoryClick = (category, section, item, close) => {
+    navigate(`/product/${category.id}/${section.id}/${item.name}`)
+    if (close) close();
+  }
+
+
 
   return (
     <div className="bg-white w-full">
@@ -217,9 +245,21 @@ export default function Navigationbar() {
                         >
                           {section.items.map((item) => (
                             <li key={item.name} className="flow-root">
-                              <a href={item.href} className="-m-2 block p-2 text-gray-500">
+
+
+                              {/* <a href={item.href} className="-m-2 block p-2 text-gray-500">
                                 {item.name}
-                              </a>
+                              </a> */}
+                              <p onClick={() => handleCategoryClick(
+                                category,
+                                section,
+                                item,
+                                () => setOpen(false)
+                              )} className="cursor-pointer hover:text-gray-800">
+                                {item.name}
+                              </p>
+
+
                             </li>
                           ))}
                         </ul>
@@ -352,9 +392,12 @@ export default function Navigationbar() {
                                     >
                                       {section.items.map((item) => (
                                         <li key={item.name} className="flex">
-                                          <a href={item.href} className="hover:text-gray-800">
+                                          <p
+                                            onClick={() => handleCategoryClick(category, section, item, close)}
+                                            className="cursor-pointer hover:text-gray-800"
+                                          >
                                             {item.name}
-                                          </a>
+                                          </p>
                                         </li>
                                       ))}
                                     </ul>
@@ -382,6 +425,10 @@ export default function Navigationbar() {
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-4">
                   <Avatar
+                    onClick={handleUserClick}
+                    aria-controls={openUserMenu ? 'basic-menu' : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={openUserMenu ? 'true' : undefined}
                     sx={{
                       bgcolor: '#4f46e5',
                       color: 'white',
@@ -393,6 +440,19 @@ export default function Navigationbar() {
                   >
                     R
                   </Avatar>
+                  <Menu
+                    id="basic-menu"
+                    anchorEl={anchorEl}
+                    open={openUserMenu}
+                    onClose={handleCloseUserMenu}
+                    MenuListProps={{
+                      'aria-labelledby': 'basic-button',
+                    }}
+                  >
+                    <MenuItem onClick={handleCloseUserMenu}>Profile</MenuItem>
+                    <MenuItem onClick={()=>navigate("/account/order")}>My Orders</MenuItem>
+                    <MenuItem onClick={handleCloseUserMenu}>Logout</MenuItem>
+                  </Menu>
                 </div>
 
                 {/* Search */}
